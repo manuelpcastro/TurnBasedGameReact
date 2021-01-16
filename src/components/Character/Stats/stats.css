@@ -3,6 +3,7 @@
     border-width: 2px;
     border-style:dotted;
     display: flex;
+    flex-basis: 0;
     flex-wrap: wrap;
 }
 
@@ -10,8 +11,7 @@
    display:inline-block;
    flex-grow: 1;
    flex-wrap: wrap;
-   margin:3rem;
-   min-width: 4.5rem;
+   margin:2rem;
 }
 
 .stat-icon {
@@ -21,7 +21,3 @@
     margin-right:1rem;
 }
 
-.stat-value{
-    display:inline-block;
-    font-size: 3rem;
-}

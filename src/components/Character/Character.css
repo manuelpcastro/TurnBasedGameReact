@@ -1,0 +1,14 @@
+.character-container{
+    background-color: black;
+    border-width: 2px;
+    border-style:dotted;
+    display: block;
+}
+
+.char-icon {
+    min-width:8rem;
+}
+
+.stats {
+    float: right;
+}
