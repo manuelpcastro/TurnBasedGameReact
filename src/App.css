@@ -22,7 +22,6 @@ html{
 }
 
 .character {
-  display: inline-block;
   float:left;
   flex-direction: row;
   align-items: center;
@@ -31,7 +30,6 @@ html{
 }
 
 .enemy {
-  display: inline-block;
   float:right;
   flex-direction: row;
   align-items: center;

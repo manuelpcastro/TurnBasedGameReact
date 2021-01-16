@@ -6,13 +6,13 @@ import Info from './Submenus/Info';
 class Menu extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { current: props.user, action: 0, subaction: 0 };
+        this.state = { current: props.player, action: 0, subaction: 0 };
     }
 
     render() {
         return (
             <div className="menu">
-                <Info name={this.props.user.name} />
+                <Info name={this.props.player.name} />
                 <div className="menu-container">
                     
                     <div className="menu-title">

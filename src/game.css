@@ -1,0 +1,19 @@
+
+.character {
+  float:left;
+  flex-direction: row;
+  align-items: center;
+  color: white;
+  margin:3rem;
+}
+
+.enemy {
+  float:right;
+  flex-direction: row;
+  align-items: center;
+  color: white;
+  margin:3rem;
+}
+
+
+
