@@ -16,21 +16,32 @@ function Game() {
 
 
 
-    const next = () => setCurrent((current+1)%2);
+    const next = () => setCurrent((current + 1) % 2);
 
+    const attack = () => {
+        players[(current + 1) % 2].hp -= (players[current].dmg - players[(current + 1) % 2].shield);
+        next();
+        players[current].shield = 0;  
+    }
+
+    const defend = () => {
+        console.log(players);
+        players[current].shield = 5;
+        next();
+    }
 
     return (
         <div className="App">
 
             <div className="character">
-                <Character player={players[current]}/>
+                <Character player={players[0]} />
             </div>
 
             <div className="enemy">
-                <Character player={players[(current+1)%2]} />
+                <Character player={players[1]} />
             </div>
 
-            <Menu player={players[current]}/>
+            <Menu attack={attack} defend={defend} player={players[current]} />
         </div>
     );
 

@@ -4,7 +4,7 @@ import './stats.css'
 
 function Stats(props) {
     return (
-        <div className='stats-container'>
+        <div key={props.hp} className='stats-container'>
 
             <div className='stat'>
                 <span>❤️ HP {props.hp}</span>

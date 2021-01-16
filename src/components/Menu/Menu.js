@@ -15,11 +15,11 @@ class Menu extends React.Component {
                 <Info name={this.props.player.name} />
                 <div className="menu-container">
                     
-                    <div className="menu-title">
+                    <div onClick={this.props.attack} className="menu-title">
                         Attack
                     </div>
                    
-                    <div className="menu-title">
+                    <div onClick={this.props.defend} className="menu-title">
                         Defend
                     </div>
                    

@@ -2,11 +2,13 @@
     {
         "name": "Cloud",
         "hp": 300,
-        "dmg": 60
+        "dmg": 60,
+        "shield": 0
     },
     {
         "name": "Red",
         "hp": 450,
-        "dmg": 35
+        "dmg": 35,
+        "shield":0
     }
 ]

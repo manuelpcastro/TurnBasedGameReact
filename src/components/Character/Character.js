@@ -6,24 +6,28 @@ import Items from './Items/Items';
 
 import './Character.css';
 
-class Character extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hp: props.player.hp, dmg: props.player.dmg, potions: ['+20', '+20', '+10'] };
-  }
+function Character(props) {
+ 
+    //this.state = { hp: props.player.hp, dmg: props.player.dmg, potions: ['+20', '+20', '+10'] };
+  const [hp, setHP] = React.useState(0);
 
-  render() {
-    return (
-      <div className='character-container'>
-        <Avatar avatar={this.props.player.name} />
-        <div className='character-name'>
-          <h3>{this.props.player.name}</h3>
-        </div>
-        <Stats className='stats' hp={this.state.hp} dmg={this.state.dmg} />
-        <Items potions={this.state.potions} />
+  const potions= ['+20', '+20', '+10'];
+
+  React.useEffect(() =>{
+    setHP(props.player.hp);
+  },[hp,props.player.hp]);
+
+  return (
+    <div key={props.player} className='character-container'>
+      <Avatar avatar={props.player.name} />
+      <div className='character-name'>
+        <h3>{props.player.name}</h3>
       </div>
-    );
-  }
+      <Stats className='stats' hp={hp} dmg={props.player.dmg} />
+      <Items potions={potions} />
+    </div>
+  );
+
 }
 
 export default Character;
