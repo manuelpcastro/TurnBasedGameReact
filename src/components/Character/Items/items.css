@@ -1,7 +1,6 @@
 .items-container{
-    background-color: black;
-    border-width: 2px;
-    border-style:dotted;
+    border-width: 1px;
+    border-style:solid;
     
 }
 

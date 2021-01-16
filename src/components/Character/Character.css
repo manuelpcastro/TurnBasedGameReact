@@ -1,7 +1,14 @@
 .character-container{
-    background-color: black;
+    background: radial-gradient(#0053ad 40px,#001b85 90px,#000223);
+
     border-width: 2px;
-    border-style:dotted;
+    border-style:solid;
+    display: block;
+}
+
+.character-name{
+    border-width: 1px;
+    border-style:solid;
     display: block;
 }
 

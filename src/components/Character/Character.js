@@ -9,14 +9,14 @@ import './Character.css';
 class Character extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { hp: 100, dmg: 10 , potions: ['+30', '+20', '+20', '+10']};
+    this.state = { hp: 100, dmg: 10 , potions: ['+20', '+20', '+10']};
   }
 
   render() {
     return (
       <div className='character-container'>
         <Avatar avatar={this.props.name} />
-        <div className='character-container'>
+        <div className='character-name'>
           <h3>{this.props.name}</h3>
         </div>
         <Stats className='stats' hp={this.state.hp} dmg={this.state.hp} />
