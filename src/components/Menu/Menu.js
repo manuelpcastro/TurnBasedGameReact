@@ -14,16 +14,19 @@ class Menu extends React.Component {
             <div className="menu">
                 <Info name={this.props.user.name} />
                 <div className="menu-container">
-
-                    <div class="menu-title">
+                    
+                    <div className="menu-title">
                         Attack
                     </div>
-                    <div class="menu-title">
+                   
+                    <div className="menu-title">
                         Defend
                     </div>
-                    <div class="menu-title">
+                   
+                    <div className="menu-title">
                         Use Item
                     </div>
+
                 </div>
             </div>
         );

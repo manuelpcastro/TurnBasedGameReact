@@ -2,6 +2,8 @@ html{
   background: radial-gradient(#0053ad 100px,#001b85 300px,#000223);
 }
 
+
+
 .App {
   text-align: center;
  
@@ -19,14 +21,22 @@ html{
   }
 }
 
-.App-header {
-
+.character {
   display: inline-block;
+  float:left;
   flex-direction: row;
   align-items: center;
   color: white;
   margin:3rem;
+}
 
+.enemy {
+  display: inline-block;
+  float:right;
+  flex-direction: row;
+  align-items: center;
+  color: white;
+  margin:3rem;
 }
 
 .App-link {
