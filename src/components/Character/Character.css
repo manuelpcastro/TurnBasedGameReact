@@ -1,9 +1,9 @@
 .character-container{
     background: radial-gradient(#0053ad 40px,#001b85 90px,#000223);
-
     border-width: 2px;
     border-style:solid;
     display: block;
+    border-radius: 10px;
 }
 
 .character-name{

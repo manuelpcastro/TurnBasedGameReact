@@ -1,0 +1,38 @@
+.menu {
+    background: radial-gradient(#0053ad 0px, #001b85 0px, #000223);
+    border-width: 2px;
+    border-style: solid;
+    display: block;
+    position: fixed;
+    left: 0;
+    bottom: 0rem;
+    width: 100%;
+    color: white;
+}
+
+.menu-container{
+    display:flex;
+}
+
+.menu-title {
+    border-width:1px;
+    border-style: solid;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.character-name {
+    border-width: 1px;
+    border-style: solid;
+    display: block;
+}
+
+.menu-info {
+    display:block;
+}
+.char-icon {
+    min-width: 8rem;
+}

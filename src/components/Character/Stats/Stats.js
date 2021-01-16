@@ -7,14 +7,14 @@ function Stats(props) {
         <div className='stats-container'>
 
             <div className='stat'>
-                <span>❤️ HP {props.hp}</span> 
+                <span>❤️ HP {props.hp}</span>
             </div>
 
             <div className='stat'>
-                <span>⚔️ DMG {props.dmg}</span> 
+                <span>⚔️ DMG {props.dmg}</span>
             </div>
 
-         
+
         </div>
     );
 }

@@ -9,7 +9,7 @@ import './Character.css';
 class Character extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { hp: 100, dmg: 10 , potions: ['+20', '+20', '+10']};
+    this.state = { hp: 100, dmg: 10, potions: ['+20', '+20', '+10'] };
   }
 
   render() {
@@ -20,7 +20,7 @@ class Character extends React.Component {
           <h3>{this.props.name}</h3>
         </div>
         <Stats className='stats' hp={this.state.hp} dmg={this.state.hp} />
-        <Items potions={this.state.potions}/>
+        <Items potions={this.state.potions} />
       </div>
     );
   }
