@@ -7,11 +7,11 @@ function Stats(props) {
         <div className='stats-container'>
 
             <div className='stat'>
-                <span>❤</span> HP: {props.hp}
+                <span>❤️ HP {props.hp}</span> 
             </div>
 
             <div className='stat'>
-                <span>⚔</span> DMG: {props.dmg}
+                <span>⚔️ DMG {props.dmg}</span> 
             </div>
 
          

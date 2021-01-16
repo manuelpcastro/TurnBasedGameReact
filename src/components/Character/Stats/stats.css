@@ -8,10 +8,9 @@
 }
 
 .stat {
-   display:inline-block;
-   flex-grow: 1;
-   flex-wrap: wrap;
-   margin:2rem;
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(4.5rem,1fr));
+    margin:1rem;
 }
 
 .stat-icon {
