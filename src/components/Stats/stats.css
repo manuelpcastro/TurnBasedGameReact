@@ -2,4 +2,26 @@
     background-color: black;
     border-width: 2px;
     border-style:dotted;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.stat {
+   display:inline-block;
+   flex-grow: 1;
+   flex-wrap: wrap;
+   margin:3rem;
+   min-width: 4.5rem;
+}
+
+.stat-icon {
+    display:inline-block;
+    max-width:2rem;
+    flex-grow: 0;
+    margin-right:1rem;
+}
+
+.stat-value{
+    display:inline-block;
+    font-size: 3rem;
 }

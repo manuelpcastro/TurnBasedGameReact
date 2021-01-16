@@ -1,26 +1,3 @@
-.grid {
-  grid-template-areas: 
-  'img' 
-  'button';
-
-
-}
-
-.fire {
-  background-color: aliceblue;
-}
-
-.bonfire {
-  max-width: 10rem;
-  grid-area:img;
-}
-
-.button {
-  display:grid;
-  grid-area: button;
-  
-}
-
 .App {
   text-align: center;
 }

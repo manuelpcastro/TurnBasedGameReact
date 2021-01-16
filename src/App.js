@@ -1,6 +1,5 @@
 import logo from './logo.svg';
 import './App.css';
-import Fire from './components/fire.js';
 import Stats from './components/Stats/stats'
 
 function App() {
@@ -8,8 +7,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <Stats hp={30} a={40} />
-        <Fire />
+        <Stats hp={30} dmg={40} />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>

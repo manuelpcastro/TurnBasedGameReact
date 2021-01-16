@@ -4,7 +4,13 @@ import './stats.css'
 function Stats(props) {
     return (
         <div className='stats-container'>
-            <p>HP: {props.hp} A: {props.a} </p>
+            <div className='stat'>
+                <span>❤</span> HP: {props.hp}
+            </div>
+
+            <div className='stat'>
+                <span>⚔</span> DMG: {props.dmg}
+            </div>
         </div>
     );
 }
