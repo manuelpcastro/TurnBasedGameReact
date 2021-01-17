@@ -74,7 +74,7 @@ function Game() {
     return (
         <div className="App">
 
-            <div className="character ">
+            <div className="character">
                 {cursorPlayer1 && <img alt="cursor" className="selected" src="./img/cursor.png" />}
                 <Character isAttacked={hit2} player={players[0]} />
             </div>

@@ -8,6 +8,7 @@ function Menu(props) {
 
     const [action, setAction] = useState("");
     const [playerName, setPlayerName] = useState("");
+    const [useItem, usingItem] = useState(false);
 
     const setEvent = (selectAction) => {
         setAction(selectAction);
@@ -24,9 +25,16 @@ function Menu(props) {
         props.defend();
     }
 
+    const item = () => {
+        setAction("");
+        usingItem(true);
+
+    }
+
     return (
         <div>
             {action !== "" ? <Event name={playerName} action={action} /> : null}
+            {useItem ? <Event name={playerName} action={action} /> : null}
             <div className="menu">
                 <Info name={props.player.name} />
                 <div className="menu-container">
@@ -39,9 +47,9 @@ function Menu(props) {
                         Defend
                     </div>
 
-                    <div className="menu-title">
+                    <div onClick={item} className="menu-title">
                         Use Item
-                </div>
+                    </div>
 
                 </div>
             </div>
