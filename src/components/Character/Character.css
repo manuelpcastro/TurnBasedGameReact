@@ -20,3 +20,24 @@
 .stats {
     float: right;
 }
+
+
+.animation {
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 10px;
+    animation: damaged 0.5s;
+    animation-iteration-count: 4;
+  }
+  
+  @keyframes damaged {
+    0% {
+      border-color: red;
+    }
+    50% {
+      border-color: white;
+    }
+    100% {
+      border-color: red;
+    }
+  }
