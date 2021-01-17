@@ -24,6 +24,7 @@
     text-align: center;
     padding-top: 1rem;
     padding-bottom: 1rem;
+    cursor: pointer;
 }
 
 .character-name {
@@ -35,6 +36,22 @@
 .menu-info {
     display:block;
 }
-.char-icon {
-    min-width: 8rem;
+
+.char-menu-icon {
+    max-width: 8vw;
+    margin-right: 0.5rem;
 }
+
+.event-menu {
+    background: radial-gradient(#0053ad 40px, #001b85 90px, #000223);
+    color: white;
+    border-width: 2px;
+    border-style: solid;
+    display: inline-block;
+    border-radius: 10px;
+    align-items: center;
+    text-align: center;
+    font-size: 4vh;
+    padding: 1rem;
+    z-index: 999;
+  }
