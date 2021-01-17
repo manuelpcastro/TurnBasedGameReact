@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/TurnBasedGameReact/static/css/main.fdc36176.chunk.css",
-    "main.js": "/TurnBasedGameReact/static/js/main.7589f251.chunk.js",
-    "main.js.map": "/TurnBasedGameReact/static/js/main.7589f251.chunk.js.map",
+    "main.js": "/TurnBasedGameReact/static/js/main.c296b977.chunk.js",
+    "main.js.map": "/TurnBasedGameReact/static/js/main.c296b977.chunk.js.map",
     "runtime-main.js": "/TurnBasedGameReact/static/js/runtime-main.cc6b93a0.js",
     "runtime-main.js.map": "/TurnBasedGameReact/static/js/runtime-main.cc6b93a0.js.map",
     "static/js/2.4a1e6d14.chunk.js": "/TurnBasedGameReact/static/js/2.4a1e6d14.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.cc6b93a0.js",
     "static/js/2.4a1e6d14.chunk.js",
     "static/css/main.fdc36176.chunk.css",
-    "static/js/main.7589f251.chunk.js"
+    "static/js/main.c296b977.chunk.js"
   ]
 }
