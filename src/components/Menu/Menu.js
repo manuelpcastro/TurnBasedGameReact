@@ -28,7 +28,6 @@ function Menu(props) {
     }
 
     const item = () => {
-        setAction("");
         usingItem(true);
     }
 

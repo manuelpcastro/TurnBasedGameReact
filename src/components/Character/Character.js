@@ -11,8 +11,6 @@ function Character(props) {
   const [hp, setHP] = React.useState(0);
   const [isAttacked, setAttacked] = React.useState(false);
   const [animation, setAnimation] = React.useState("");
-  
-  const potions= ['+20', '+20', '+10'];
 
   React.useEffect(() =>{
     setHP(props.player.hp);
@@ -30,7 +28,7 @@ function Character(props) {
       <div className='character-name'>
         <h3>{props.player.name}{props.player.defending && '🛡️'}</h3> 
       </div>
-      <Stats className='stats' isAttacked={isAttacked} hp={hp} dmg={props.player.dmg} />
+      <Stats className='stats' isHealing={props.isHealing} isAttacked={isAttacked} hp={hp} dmg={props.player.dmg} />
       <Items potions={props.player.potions} />
     </div>
   );

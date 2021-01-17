@@ -18,6 +18,9 @@ function Game() {
     const [hit1, setHit1] = React.useState(false);
     const [hit2, setHit2] = React.useState(false);
 
+    const [heal1, setHeal1] = React.useState(false);
+    const [heal2, setHeal2] = React.useState(false);
+
     const players = Players;
 
     const next = () => {
@@ -27,11 +30,14 @@ function Game() {
     }
 
     const paintHit = () => (current === 0) ? setHit1(true) : setHit2(true);
+    const paintHeal = () =>(current === 0) ? setHeal1(true) : setHeal2(true);
     
-
-    const resetHitEffect = () => {
+    const resetEffects = () => {
         setHit1(false);
         setHit2(false);
+
+        setHeal1(false);
+        setHeal2(false);
     }
 
     const checkEnding = () => {
@@ -43,7 +49,7 @@ function Game() {
 
 
     const attack = () => {
-        resetHitEffect();
+        resetEffects();
 
         if (checkEnding())
             return;
@@ -59,7 +65,7 @@ function Game() {
     }
 
     const defend = () => {
-        resetHitEffect();
+        resetEffects();
 
         if (checkEnding())
             return;
@@ -72,12 +78,15 @@ function Game() {
     }
 
     const heal = (potion) => {
-        resetHitEffect();
+        resetEffects();
 
         let heal = potion.match(/(\d+)/);
         console.log(heal);
         players[current].hp += parseInt(heal[0]);
 
+        let index = players[current].potions.indexOf(potion);
+        players[current].potions.splice(index,1);
+        paintHeal();
         checkEnding();
 
         next();
@@ -88,12 +97,12 @@ function Game() {
 
             <div className="character">
                 {cursorPlayer1 && <img alt="cursor" className="selected" src="./img/cursor.png" />}
-                <Character isAttacked={hit2} player={players[0]} />
+                <Character isHealing={heal1} isAttacked={hit2} player={players[0]} />
             </div>
 
             <div className="enemy">
                 {cursorPlayer2 && <img alt="cursor" className="selected" src="./img/cursor.png" />}
-                <Character isAttacked={hit1} player={players[1]} />
+                <Character isHealing={heal2} isAttacked={hit1} player={players[1]} />
             </div>
 
             {ending ?

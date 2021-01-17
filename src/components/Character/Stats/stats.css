@@ -17,9 +17,9 @@
     margin-right: 1rem;
 }
 
-.hp-animation {
+.dmg-animation {
     animation: hp-damage 0.5s;
-    animation-iteration-count: 4;
+    animation-iteration-count: 3;
 }
 
 @keyframes hp-damage {
@@ -31,5 +31,23 @@
     }
     100% {
         color: red;
+    }
+}
+
+
+.heal-animation {
+    animation: hp-up 0.5s;
+    animation-iteration-count: 3;
+}
+
+@keyframes hp-up {
+    0% {
+        color: green;
+    }
+    50% {
+        color: white;
+    }
+    100% {
+        color: green;
     }
 }

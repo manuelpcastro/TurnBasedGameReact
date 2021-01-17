@@ -3,14 +3,17 @@ import './stats.css'
 
 
 function Stats(props) {
-    const [isAttacked, setAttacked] = useState(false);
     const [animation, setAnimation] = useState("");
 
     useEffect(() => {
-        setAttacked(props.isAttacked);
-        isAttacked ? setAnimation("hp-animation") : setAnimation("");
-    },[isAttacked, props.isAttacked]);
-    
+        setAnimation("");
+
+        if(props.isAttacked) setAnimation("dmg-animation");
+
+        if(props.isHealing) setAnimation("heal-animation");
+
+    },[props.isAttacked, props.isHealing]);
+
     return (
         <div key={props.hp} className='stats-container'>
 
