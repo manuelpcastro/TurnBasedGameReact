@@ -20,6 +20,13 @@
   z-index: 1;
 }
 
+.hit {
+  max-width: 3rem;
+  position: absolute;
+  margin: 120px 0px 0px -75px;
+  z-index: 1;
+}
+
 .ending {
   background: radial-gradient(#0053ad 40px, #001b85 90px, #000223);
   color: white;
