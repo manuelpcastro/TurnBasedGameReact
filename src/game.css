@@ -6,6 +6,26 @@
   margin: 1rem;
 }
 
+.animation {
+  border-width: 3px;
+  border-style: solid;
+  border-radius: 10px;
+  animation: damaged 0.5s;
+  animation-iteration-count: 4;
+}
+
+@keyframes damaged {
+  0% {
+    border-color: red;
+  }
+  50% {
+    border-color: white;
+  }
+  100% {
+    border-color: red;
+  }
+}
+
 .enemy {
   float: right;
   flex-direction: row;
@@ -21,7 +41,7 @@
 }
 
 .hit {
-  max-width: 3rem;
+  max-width: 5rem;
   position: absolute;
   margin: 120px 0px 0px -75px;
   z-index: 1;

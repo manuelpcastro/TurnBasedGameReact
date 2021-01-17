@@ -17,12 +17,12 @@ function Game() {
 
     const [hit1, setHit1] = React.useState(false);
     const [hit2, setHit2] = React.useState(false);
-
-
+    const [animation1, setAnimation1] = React.useState("");
+    const [animation2, setAnimation2] = React.useState("");
 
     const players = Players;
- 
-   
+
+
 
     const next = () => {
         setCurrent((current + 1) % 2);
@@ -30,42 +30,69 @@ function Game() {
         setCursor2(!cursorPlayer2);
     }
 
-    const attack = () => {
+    const paintHit = () => {
+        if (current === 0){ 
+            setHit1(true);
+            setAnimation2("animation");
+            
+        }
+        else {
+            setHit2(true);
+            setAnimation1("animation");
+        }
+    }
+
+    const resetHitEffect = () => {
         setHit1(false);
         setHit2(false);
-        players[(current + 1) % 2].hp -= (players[current].dmg - players[(current + 1) % 2].shield);
-        (current===0) ? setHit1(true) : setHit2(true);
+        setAnimation1("");
+        setAnimation2("");
+    }
 
-        next();
-        if (players[current].hp <= 0) {
+    const checkEnding = () => {
+        if (players[current].hp <= 0 || players[(current + 1) % 2] <= 0)
             setEnding(true);
-        }
-        players[current].shield = 0;
+
+        return ending
+    }
+
+
+    const attack = () => {
+        resetHitEffect();
+
+        if(checkEnding())
+            return;
+
+        players[(current + 1) % 2].hp -= (players[current].dmg - players[(current + 1) % 2].shield);
+
+        paintHit();
+        
+        next();
+
+        players[current].defending = false;
     }
 
     const defend = () => {
-        setHit1(false);
-        setHit2(false);
-        console.log(players);
-        players[current].shield = 5;
+        resetHitEffect();
+
+        if(checkEnding())
+            return;
+
+        players[current].defending = true;
+
         next();
-        if (players[current].hp <= 0) {
-            setEnding(true);
-        }
     }
 
     return (
         <div className="App">
 
-            <div className="character">
+            <div className={"character " + animation1}>
                 {cursorPlayer1 && <img alt="cursor" className="selected" src="./img/cursor.png" />}
-                {hit1 && <img alt="hit" className="hit" src="./img/hit.png" />}
                 <Character player={players[0]} />
             </div>
 
-            <div className="enemy">
+            <div className={"enemy " + animation2}>
                 {cursorPlayer2 && <img alt="cursor" className="selected" src="./img/cursor.png" />}
-                {hit2 && <img alt="hit" className="hit" src="./img/hit.png" />}
                 <Character player={players[1]} />
             </div>
 
