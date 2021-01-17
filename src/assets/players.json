@@ -13,6 +13,6 @@
         "dmg": 35,
         "defend":false,
         "shield":35,
-        "potions":[]
+        "potions":["+30", "+40", "+10"]
     }
 ]
