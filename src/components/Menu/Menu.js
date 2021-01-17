@@ -3,6 +3,7 @@ import './Menu.css'
 
 import Info from './Submenus/Info';
 import Event from './Submenus/Event';
+import ItemSubmenu from './Submenus/ItemSubmenu'
 
 function Menu(props) {
 
@@ -13,6 +14,7 @@ function Menu(props) {
     const setEvent = (selectAction) => {
         setAction(selectAction);
         setPlayerName(props.player.name);
+        usingItem(false);
     }
 
     const attack = () => {
@@ -28,13 +30,18 @@ function Menu(props) {
     const item = () => {
         setAction("");
         usingItem(true);
+    }
 
+    const use = (item) =>{
+        setEvent("healing");
+        props.heal(item);
+        console.log(item);
     }
 
     return (
         <div>
             {action !== "" ? <Event name={playerName} action={action} /> : null}
-            {useItem ? <Event name={playerName} action={action} /> : null}
+            {useItem ? <ItemSubmenu onClick={use} items={props.player.potions} /> : null}
             <div className="menu">
                 <Info name={props.player.name} />
                 <div className="menu-container">

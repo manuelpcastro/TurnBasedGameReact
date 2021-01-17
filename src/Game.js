@@ -71,6 +71,18 @@ function Game() {
         next();
     }
 
+    const heal = (potion) => {
+        resetHitEffect();
+
+        let heal = potion.match(/(\d+)/);
+        console.log(heal);
+        players[current].hp += parseInt(heal[0]);
+
+        checkEnding();
+
+        next();
+    }
+
     return (
         <div className="App">
 
@@ -87,7 +99,7 @@ function Game() {
             {ending ?
                 <div class="ending">Game Over</div>
                 :
-                <Menu attack={attack} defend={defend} player={players[current]} />
+                <Menu attack={attack} defend={defend} heal={heal} player={players[current]} />
             }
         </div>
     );

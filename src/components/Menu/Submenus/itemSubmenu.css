@@ -1,0 +1,27 @@
+.submenu-item-container{
+     background: radial-gradient(#0053ad 40px, #001b85 90px, #000223);
+    color: white;
+    border-width: 2px;
+    border-style: solid;
+    display: inline-flex;
+    border-radius: 10px;
+    align-items: center;
+    font-size: 3vh;
+    margin: 1rem;
+    z-index: 999;
+}
+
+.submenu-item {
+   display:grid;
+   border-width: 2px;
+   border-style: solid;
+   gap:1rem;
+   grid-template-columns: repeat(auto-fill, minmax(6rem,1fr));
+   padding:0.2rem;
+   cursor: pointer;
+}
+
+.item-icon {
+    max-width:2rem;
+}
+

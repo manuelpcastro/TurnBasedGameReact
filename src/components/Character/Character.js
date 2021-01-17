@@ -31,7 +31,7 @@ function Character(props) {
         <h3>{props.player.name}{props.player.defending && '🛡️'}</h3> 
       </div>
       <Stats className='stats' isAttacked={isAttacked} hp={hp} dmg={props.player.dmg} />
-      <Items potions={potions} />
+      <Items potions={props.player.potions} />
     </div>
   );
 
