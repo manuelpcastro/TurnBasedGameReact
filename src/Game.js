@@ -53,8 +53,9 @@ function Game() {
 
         if (checkEnding())
             return;
-
-        players[(current + 1) % 2].hp -= (players[current].dmg - players[(current + 1) % 2].shield);
+       
+        let shield = players[(current +1)%2].defending ? players[(current + 1) % 2].shield : 0;
+        players[(current + 1) % 2].hp -= (players[current].dmg - shield);
         paintHit();
 
         checkEnding();
