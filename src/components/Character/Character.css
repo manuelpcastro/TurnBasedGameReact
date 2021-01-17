@@ -27,8 +27,8 @@
     border-style: solid;
     border-radius: 10px;
     animation: damaged 0.5s;
-    animation-iteration-count: 4;
-  }
+    animation-iteration-count: 4
+}
   
   @keyframes damaged {
     0% {

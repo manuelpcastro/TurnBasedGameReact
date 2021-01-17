@@ -38,7 +38,7 @@
 }
 
 .char-menu-icon {
-    max-width: 8vw;
+    max-width: 10vw;
     margin-right: 0.5rem;
 }
 
@@ -47,11 +47,10 @@
     color: white;
     border-width: 2px;
     border-style: solid;
-    display: inline-block;
+    display: inline-flex;
     border-radius: 10px;
     align-items: center;
-    text-align: center;
-    font-size: 4vh;
-    padding: 1rem;
+    font-size: 3vh;
+    margin: 1rem;
     z-index: 999;
   }
