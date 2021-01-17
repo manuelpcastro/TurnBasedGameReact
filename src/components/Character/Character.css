@@ -1,0 +1,43 @@
+.character-container{
+    background: radial-gradient(#0053ad 40px,#001b85 90px,#000223);
+    border-width: 2px;
+    border-style:solid;
+    display: block;
+    border-radius: 10px;
+    font-size: 3vmin;
+}
+
+.character-name{
+    border-width: 1px;
+    border-style:solid;
+    display: block;
+}
+
+.char-icon {
+    min-width:3rem;
+}
+
+.stats {
+    float: right;
+}
+
+
+.animation {
+    border-width: 3px;
+    border-style: solid;
+    border-radius: 10px;
+    animation: damaged 0.5s;
+    animation-iteration-count: 4
+}
+  
+  @keyframes damaged {
+    0% {
+      border-color: red;
+    }
+    50% {
+      border-color: white;
+    }
+    100% {
+      border-color: red;
+    }
+  }

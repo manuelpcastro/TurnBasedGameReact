@@ -1,0 +1,41 @@
+.character {
+  float: left;
+  flex-direction: row;
+  align-items: center;
+  color: white;
+  margin: 1rem;
+}
+
+.enemy {
+  float: right;
+  flex-direction: row;
+  align-items: center;
+  color: white;
+  margin: 1rem;
+}
+
+.selected {
+  position: absolute;
+  margin: 12px 0px 0px -75px;
+  z-index: 1;
+}
+
+.hit {
+  max-width: 5rem;
+  position: absolute;
+  margin: 120px 0px 0px -75px;
+  z-index: 1;
+}
+
+.ending {
+  background: radial-gradient(#0053ad 40px, #001b85 90px, #000223);
+  color: white;
+  border-width: 2px;
+  border-style: solid;
+  display: inline-block;
+  border-radius: 10px;
+  align-items: center;
+  font-size: 1rem;
+  padding: 2rem;
+  z-index: 999;
+}

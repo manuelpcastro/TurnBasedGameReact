@@ -1,0 +1,35 @@
+.stats-container {
+    border-width: 1px;
+    border-style: solid;
+    flex-wrap: wrap;
+    align-items: center;
+    display: grid;
+}
+
+.stat {
+    margin: 0.5rem;
+}
+
+.stat-icon {
+    display: inline-block;
+    max-width: 2rem;
+    flex-grow: 0;
+    margin-right: 1rem;
+}
+
+.hp-animation {
+    animation: hp-damage 0.5s;
+    animation-iteration-count: 4;
+}
+
+@keyframes hp-damage {
+    0% {
+        color: red;
+    }
+    50% {
+        color: white;
+    }
+    100% {
+        color: red;
+    }
+}

@@ -1,0 +1,16 @@
+.items-container{
+    border-width: 1px;
+    border-style:solid;
+}
+
+.item {
+   display:grid;
+   gap:1rem;
+   grid-template-columns: repeat(auto-fill, minmax(6rem,1fr));
+   padding:0.2rem;
+}
+
+.item-icon {
+    max-width:2rem;
+}
+
